@@ -1,25 +1,8 @@
 ____This is an interpreter for a sub-set of the Scheme programming language____
 
 *This is a current high-level overview of the interpreter
-      +----------------+
-      |    Scheme      |
-      |  source code   |
-      |                |
-      +-------+--------+
-              |
-              |
-             \|/
-      +----------------+
-      |  High-Level    |
-      |  Interpreter   |
-      |                |
-      +-------+--------+
-              |
-              |
-             \|/
-
-           Output
-
+     Scheme code => High-Level Interpreter => Output
+     
 ******To use the interpreter******
 1. write your Scheme code into a text file 
 2. run interpreter.py, passing the file name as a command-line argument
