@@ -1,6 +1,6 @@
 ____This is an interpreter for a sub-set of the Scheme programming language____
 
-*This is a current high-level overview of the interpreter
+This is a current high-level overview of the interpreter
      Scheme code => High-Level Interpreter => Output
      
 ******To use the interpreter******
@@ -101,9 +101,8 @@ by calling the corresponding functions. With the help of dictionaries, the funct
 and calls the corresponding function that shoul be executed at the given moment.
 Then, due to recursion, this operation continues until the end of operations.
 
-_____newline,math_,quantity_operators,arithmetic_operators,logical_operators,let
-if_statement,remainder,list_,def_syntax,syntax_rules,begin,length,car,lambda_,cdr, lambda
-
+**newline, math_, quantity_operators, arithmetic_operators, logical_operators, let
+if_statement, remainder, list_, def_syntax, syntax_rules, begin, length, car, lambda_, cdr, lambda**
 these functions are the functions in the scheme implemented in the python language,
 these are called when we use them in the scheme file
 
