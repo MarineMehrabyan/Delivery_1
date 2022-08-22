@@ -18,7 +18,7 @@ begin, car, cdr, list operations, if/else statement  display,
 Each statement in the source file will be evaluated in turn,
 and any printable results will be displayed to standard output.
 
-_____Project description_____
+_____Brief description of the program_____
 
 The program receives a text file, divides it into action blocks.
 In order to correctly organize the sequence of operations,
@@ -51,4 +51,59 @@ A window will open and you can run the interpreter.py file right here and see th
 To do this, you need to do the following:
 	ֆայլ => բացել => select the file you want to run, in this case it's a  text file,
 	in which is written scheme code => աեղմել open =>  Աշտատացնել 
-	
+
+
+
+______detailed description of functions______
+
+__paring__
+Function takes a filename as an argument. Reads symbol by symbol, considers a number of cases depending on the symbol read,
+divides by tokens. also solves the problem of comments, it ignores it and does not put it in the list.
+Function returns the list of received tokens.
+
+__parse__
+the function receives as an argument the list returned by the parting function. checks the correctness of parentheses 
+using the parentheses function. the resulting list is modified by the action block using the push function,
+which sorts the actions in the list according to the nested parentheses. Function returns the received list
+
+__change__
+The function receives a list of tokens. The purpose of the function is as follows. Replaces the variables in the 
+list with their value. If function , calls the corresponding function, placing the value instead of the list.
+Function returns the newly received list 
+
+__clean__
+function takes a list.
+it is possible that None values were generated during operations in the list, the rm function is called,
+which removes that value from the list. After that, there may be redundant nested lists in the new list. 
+The clean function corrects the embeddedness of the list. Function Returns the newly received list
+
+__define__
+The function receives a list of tokens, depending on the length of the list, declares a variable and adds it to 
+the my_var dictionary, or declares a function that is added to the dictionary by its name, arguments, and body.
+
+__run__
+Function is called when a function call that has already been declared is encountered in the program. 
+The function checks the correctness of the number of arguments, the arguments in the body of the function 
+are replaced by their values using the change function. according to how the function is declared (define-syntax, define)
+implements the body of the function as a separate expression.
+
+__display__
+Function checks the grammar of the display function,
+and then outputs the required value to the screen with standard input.
+
+__current_action__
+current_action is a recursive function that takes a list and finds the first action to be executed, 
+this is used in the compile function
+
+__compile__
+Compile is the main function of the program that performs the current operations
+by calling the corresponding functions. With the help of dictionaries, the function finds
+and calls the corresponding function that shoul be executed at the given moment.
+Then, due to recursion, this operation continues until the end of operations.
+
+__newline,math_,quantity_operators,arithmetic_operators,logical_operators,let __
+__if_statement,remainder,list_,def_syntax,syntax_rules,begin,length,car,lambda_,cdr, lambda___
+these functions are the functions in the scheme implemented in the python language,
+these are called when we use them in the scheme file
+
+
