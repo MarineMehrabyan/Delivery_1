@@ -1,1 +1,1 @@
-# mini tasks
+# small tasks
